@@ -4,6 +4,11 @@
     --black-color: #000;
     --text-color: #333;
     --border-color: #dbdbdb;
+
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-width-search-height: calc(var(--header-height) - var(--navbar-height));
+
 }
 * {
     box-sizing: inherit;
@@ -17,7 +22,7 @@ html {
     box-sizing: border-box;
 }
 .grid {
-    width: 1800px;
+    width: 1400px;
     max-width: 100%;
     margin: 0 auto;
 }
@@ -37,6 +42,13 @@ html {
     }
 
 }
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    } to {
+        transform: scale(var(--growth-to));
+    }
+}
 /* Modal */
 .modal {
     position: fixed;
@@ -45,6 +57,7 @@ html {
     bottom: 0;
     left: 0;
     display: flex;
+    animation: fadeIn linear .1s;
 }
 .modal__overlay {
     position: absolute;
@@ -53,9 +66,12 @@ html {
     background-color: rgba(0, 0, 0, 0.4);
 }
 .modal__body {
+    --growth-from: 0.7;
+    --growth-to: 1;
     margin: auto;
     position: relative;
     z-index: 1;
+    animation: growth linear .1s;
 }
 /* Button style*/
 .btn {
@@ -72,6 +88,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    line-height: 1.6rem;
 }
 .btn.btn--normal:hover {
     background-color: rgba(0, 0, 0, 0.1);
