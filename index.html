@@ -105,7 +105,21 @@
                                 </path></g></svg>
                     </div>
                     <div class="header__search">
-                        <input type="text" class="header__search-input" placeholder="Tìm kiếm sản phẩm">
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input" placeholder="Tìm kiếm sản phẩm">
+                            <!-- Search History -->
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-item">
+                                        <a href="">Kem dưỡng da</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="">Vinci pod</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="header__search-select">
                             <span class="header__search-select-label">
                                 Trong shop</span>
@@ -124,8 +138,20 @@
                         </div>
                         <button class="header__search-btn"><i class="header__search-btn-icon fas fa-search"></i></button>
                     </div>
+
+                    <!-- Shopping cart -->
                     <div class="header__cart">
-                        <i class="header__cart-icon fas fa-shopping-cart"></i>
+                        <div class="header__cart-wrap">
+                            <i class="header__cart-icon fas fa-shopping-cart"></i>
+                            <span class="header__cart-noti">3</span>
+                            <!-- No cart: header__cart-list--no-cart -->
+                            <div class="header__cart-list">
+                                <img src="./assets/img/nocart.jpg" alt="" class="header_cart--no-cart-img">
+                                <p class="header__no-cart--msg">Vui lòng mua sắm
+                                </p>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
