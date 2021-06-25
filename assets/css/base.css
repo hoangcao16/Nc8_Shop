@@ -21,8 +21,9 @@ html {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
+/* responsive */
 .grid {
-    width: 1400px;
+    width: 1200px;
     max-width: 100%;
     margin: 0 auto;
 }
@@ -75,7 +76,7 @@ html {
 }
 /* Button style*/
 .btn {
-    min-width: 142px;
+    min-width: 124px;
     height: 36px;
     text-decoration: none;
     border: none;
