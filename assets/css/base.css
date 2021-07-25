@@ -46,8 +46,11 @@ html {
     right: 0;
     bottom: 0;
     left: 0;
-    display: flex;
+    display: none;
     animation: fadeIn linear .1s;
+}
+.open {
+    display: flex;
 }
 .modal__overlay {
     position: absolute;
@@ -63,6 +66,10 @@ html {
     z-index: 1;
     animation: growth linear .1s;
 }
+.login__form {
+    display: none;
+}
+
 /* Button style*/
 .btn {
     min-width: 124px;

@@ -150,7 +150,7 @@
     margin: 0 4px;
 }
 .header__navbar-tittle--no-poiter {
-    cursor: text;
+    cursor: pointer;
     color: var(--white-color);
 }
 /* header QR code */

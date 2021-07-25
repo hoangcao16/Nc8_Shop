@@ -110,7 +110,7 @@
                                     <a href="">Đơn mua</a>
                                 </li>
                                 <li class="header__navbar-user-item header__navbar-user-item--separate">
-                                    <a href="">Đăng xuất</a>
+                                    <a>Đăng xuất</a>
                                 </li>
                             </ul>
                         </li>
@@ -783,11 +783,11 @@
         </footer>
     </div>
     <!-- Modal layout -->
-    <!-- <div class="modal">
+    <div class="modal">
         <div class="modal__overlay"></div>
-        <div class="modal__body"> -->
+        <div class="modal__body">
               <!-- Register form -->  
-                <!-- <div class="auth-form">
+                <div class="auth-form js-auth-form">
                     <div class="auth-form__container">
                         <div class="auth-form__header">
                             <h3 class="auth-form__heading">Đăng Ký</h3>
@@ -813,8 +813,8 @@
                             </p>
                         </div>
                         <div class="auth-form__controls">
-                            <button class="btn auth-form__controls-back btn--normal">TRỞ LẠI</button>
-                            <button class="btn btn--primary">ĐĂNG KÝ</button>
+                            <button class="btn auth-form__controls-back btn--normal js-back">TRỞ LẠI</button>
+                            <button class="btn btn--primary js-login">ĐĂNG KÝ</button>
                         </div>
 
                     </div>
@@ -870,8 +870,31 @@
                             <span class="auth-form__socials-tittle">Kết nối với Google</span>
                         </a>
                     </div>
-                </div>
+                </div> --> -->
             </div>
-    </div> -->
+    </div>
+
+    <script>
+        const regisForm = document.querySelector('.header__navbar-tittle--no-poiter')
+        const modal = document.querySelector('.modal')
+        const backBtn = document.querySelector('.js-back')
+        const modalBody = document.querySelector('.js-auth-form')
+
+        function showModal() {
+            modal.classList.add('open')
+        }
+
+        function offModal() {
+            modal.classList.remove('open')
+        }
+
+
+        regisForm.addEventListener('click', showModal)
+        backBtn.addEventListener('click', offModal)
+        modal.addEventListener('click', offModal)
+        modalBody.addEventListener('click', function (event) {
+            event.stopPropagation()
+        })
+    </script>
 </body>
 </html>
